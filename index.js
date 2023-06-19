@@ -97,3 +97,10 @@ app.post("/addProduct", (request, response) => {
     })
 });
 
+app.get("/addUser", (request, response) => {
+    response.render("addUser")
+})
+
+app.get("/addProduct", (request, response) => {
+    response.render("addProduct")
+})
