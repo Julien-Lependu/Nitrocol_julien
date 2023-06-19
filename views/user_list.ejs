@@ -1,0 +1,46 @@
+<div class="container mt-5">
+    <h2>Utilisateurs</h2>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">Username</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">f_name</th>
+                        <th scope="col">l_name</th>
+                        <th scope="col">Img</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i=0; i < userList.length; i++) {%>
+                        <tr>
+                            <td>
+                                <%=userList[i].username %>
+                            </td>
+                            <td>
+                                <%=userList[i].password %>
+                            </td>
+                            <td>
+                                <%=userList[i].f_name %>
+                            </td>
+                            <td>
+                                <%=userList[i].l_name %>
+                            </td>
+
+                            <td>
+                                <div id="image-liste">
+                                    <img src="<%=userList[i].img %>" class="w-25">
+                                </div>
+                            </td>
+
+                        </tr>
+                        <%} %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
