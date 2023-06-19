@@ -1,0 +1,50 @@
+
+
+<div class="container mt-5">
+    <h2>Produits</h2>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">Titre</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Img</th>
+                        <th scope="col">Dates</th>
+                        <th scope="col">Avis</th>
+                        <th scope="col">Prix</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i=0; i < produit.length; i++) {%>
+                        <tr>
+                            <th scope="row">
+                                <%=produit[i].titre %>
+                            </th>
+                            <td>
+                                <%=produit[i].description %>
+                            </td>
+                            <td>
+                                <div id="image-liste">
+                                    <img src="<%=produit[i].img %>" class="w-25">
+                                </div>
+                            </td>
+                            <td>
+                                <%=produit[i].dates %>
+                            </td>
+                            <td>
+                                <%=produit[i].avis %>
+                            </td>
+                            <td>
+                                <%=produit[i].prix %>
+                            </td>
+                        </tr>
+                        <%} %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
